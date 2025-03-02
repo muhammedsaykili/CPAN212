@@ -1,8 +1,6 @@
-// routes/userRoutes.js
 const express = require('express');
 const router = express.Router();
 
-// Dummy user data for Phase 2
 const dummyUsers = [
   {
     id: '123',
@@ -36,9 +34,7 @@ const dummyUsers = [
   }
 ];
 
-// Get user by ID
 router.get('/:userId', (req, res) => {
-  // Log the user ID as required for Phase 2
   console.log('User ID requested:', req.params.userId);
   
   const user = dummyUsers.find(u => u.id === req.params.userId);
@@ -46,7 +42,6 @@ router.get('/:userId', (req, res) => {
   if (user) {
     res.json({ success: true, user });
   } else {
-    // If user not found in our dummy data, create a generic one with the requested ID
     const genericUser = {
       id: req.params.userId,
       name: 'Sample User',
@@ -67,7 +62,6 @@ router.get('/:userId', (req, res) => {
   }
 });
 
-// Update user profile (for future phases)
 router.put('/:userId', (req, res) => {
   console.log('Update request for user:', req.params.userId);
   console.log('Update data:', req.body);

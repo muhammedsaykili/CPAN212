@@ -1,4 +1,3 @@
-// src/pages/ProductDetailsPage.jsx
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
@@ -209,7 +208,6 @@ function ProductDetailsPage() {
       <div className="related-products-section">
         <h2>Related Products</h2>
         <div className="related-products">
-          {/* This would be populated with actual related products in a later phase */}
           <div className="placeholder-message">
             Related products will be shown here in a future update.
           </div>

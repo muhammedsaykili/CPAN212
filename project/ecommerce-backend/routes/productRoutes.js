@@ -1,8 +1,6 @@
-// routes/productRoutes.js
 const express = require('express');
 const router = express.Router();
 
-// Dummy products data for Phase 2
 const dummyProducts = [
   {
     id: '1',
@@ -122,20 +120,16 @@ const dummyProducts = [
   }
 ];
 
-// Get all products
 router.get('/', (req, res) => {
   res.json({ success: true, products: dummyProducts });
 });
 
-// Search products
 router.get('/search', (req, res) => {
-  // Log the search query as required for Phase 2
   console.log('Search query:', req.query);
   
   const { query, category } = req.query;
   let results = dummyProducts;
   
-  // Filter by search query if provided
   if (query) {
     results = results.filter(product => 
       product.name.toLowerCase().includes(query.toLowerCase()) ||
@@ -143,7 +137,6 @@ router.get('/search', (req, res) => {
     );
   }
   
-  // Filter by category if provided
   if (category) {
     results = results.filter(product => 
       product.category.toLowerCase() === category.toLowerCase()
@@ -153,9 +146,7 @@ router.get('/search', (req, res) => {
   res.json({ success: true, products: results });
 });
 
-// Get product by ID
 router.get('/:productId', (req, res) => {
-  // Log the product ID as required for Phase 2
   console.log('Product ID requested:', req.params.productId);
   
   const product = dummyProducts.find(p => p.id === req.params.productId);
@@ -163,7 +154,6 @@ router.get('/:productId', (req, res) => {
   if (product) {
     res.json({ success: true, product });
   } else {
-    // If product not found in our dummy data, create a generic one with the requested ID
     const genericProduct = {
       id: req.params.productId,
       name: `Product ${req.params.productId}`,
