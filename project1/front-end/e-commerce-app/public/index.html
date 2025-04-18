@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>React App</title>
+
+    <style>
+      html, body, #root {
+        height: 100%;
+        min-height: 100%;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+      }
+
+      *, *::before, *::after {
+        box-sizing: inherit;
+      }
+
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #726f6f;
+        background-color: #f8f9fa;
+      }
+
+      a {
+        text-decoration: none;
+        color: #bbb01d;
+        transition: color 0.3s;
+      }
+
+      a:hover {
+        color: #bbb01d;
+        text-decoration: underline;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+        line-height: 1.2;
+        color: #0a0a0a;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        margin-top: 1rem;
+      }
+
+      h2 {
+        font-size: 2rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+        border-bottom: 1px solid #dee2e6;
+        padding-bottom: 0.5rem;
+      }
+
+      nav, .navbar, .menu {
+        background-color: #555657;
+        color: white;
+        padding: 1rem 0;
+        margin-bottom: 2rem;
+      }
+
+      nav a, .navbar a, .menu a {
+        color: white;
+        padding: 0.5rem 1rem;
+        margin: 0 0.2rem;
+      }
+
+      nav a:hover, .navbar a:hover, .menu a:hover {
+        color: #f8f9fa;
+      }
+
+      button, .btn, input[type="button"], input[type="submit"] {
+        background-color: #bbb01d;
+        color: white;
+        border: 1px solid #bbb01d;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.15s ease-in-out;
+      }
+
+      button:hover, .btn:hover, input[type="button"]:hover, input[type="submit"]:hover {
+        background-color: #bbb01d;
+        border-color: #bbb01d;
+      }
+
+      input[type="text"] {
+        padding: 0.5rem;
+        border: 1px solid #ced4da;
+        border-radius: 4px;
+        width: 200px;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        border-radius: 4px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+      }
+
+      .featured-products, [id*="featured"], [class*="featured"] {
+        margin: 2rem 0;
+      }
+
+      .product-card {
+        display: inline-block;
+        width: 250px;
+        margin: 10px;
+        padding: 10px;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+        will-change: transform;
+        vertical-align: top;
+      }
+
+      .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .hero {
+        background-color: #bbb01d;
+        color: white;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        text-align: center;
+        border-radius: 5px;
+      }
+
+      .hero h1 {
+        color: white;
+      }
+
+      .hero p {
+        margin-bottom: 1rem;
+      }
+
+      .hero a {
+        display: inline-block;
+        background-color: white;
+        color: #bbb01d;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        font-weight: bold;
+        margin-top: 1rem;
+      }
+
+      [id*="categories"], [class*="categories"] {
+        margin: 2rem 0;
+      }
+
+      footer, [id*="footer"], [class*="footer"] {
+        background-color: #555657;
+        color: white;
+        padding: 2rem 0;
+        margin-top: 2rem;
+        text-align: center;
+      }
+
+      footer a {
+        color: #f8f9fa;
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>
